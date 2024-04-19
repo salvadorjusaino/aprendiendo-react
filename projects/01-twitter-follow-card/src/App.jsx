@@ -11,9 +11,6 @@ function App() {
   const salvador = { initialIsFollowing: true, userName: 'salvadorjusaino' }
   const juan = { initialIsFollowing: false, userName: 'juanlopez' }
 
-  console.log('🚀 ~ ', juan);
-  
-
   const users = [
     {
       userName: 'salvadorjusaino',

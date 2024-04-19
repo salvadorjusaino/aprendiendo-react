@@ -12,7 +12,7 @@ export function TwitterFollowCard({ children, userName = 'Unknown', initialIsFol
   }
 
   return (
-    <article className='tw-followCard'>
+    <article className='tw-followCard' data-id={userName}>
       <header className='tw-followCard-header'>
         <img className='tw-followCard-avatar' src={`https://placehold.co/50`} alt={`El avatar ${userName}`} />
         <div className='tw-followCard-info'>

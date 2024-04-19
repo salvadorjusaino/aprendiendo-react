@@ -11,21 +11,34 @@ function App() {
   const salvador = { initialIsFollowing: true, userName: 'salvadorjusaino' }
   const juan = { initialIsFollowing: false, userName: 'juanlopez' }
 
+  const users = [
+    {
+      userName: 'salvadorjusaino',
+      name: 'Salvador Jusaino',
+      isFollowing: true
+    },
+    {
+      userName: 'juanlopez',
+      name: 'Juan López',
+      isFollowing: false
+    }
+  ];
+
   return (
     <section className='App'>
-      <TwitterFollowCard {...salvador}>
-        Salvador Jusaino
-      </TwitterFollowCard>
-
-      <TwitterFollowCard {...juan}>
-        Juan Lépez
-      </TwitterFollowCard>
-
-      <TwitterFollowCard initialIsFollowing userName={ name }>
-        Ana María H
-      </TwitterFollowCard>
-
-      <button onClick={() => setName('anamaria')}>Cambiar nombre</button>
+      {
+        users.map(({ userName, name, isFollowing }) => {
+          return (
+            <TwitterFollowCard
+              key={userName}
+              userName={userName}
+              initialIsFollowing={isFollowing}
+            >
+              {name}
+            </TwitterFollowCard>
+          )
+        })
+      }
     </section>
   )
 }

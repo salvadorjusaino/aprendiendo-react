@@ -7,26 +7,17 @@ function App() {
 
   return (
     <section className='App'>
-      <TwitterFollowCard
-        formatUsername={format}
-        isFollowing
-        userName="salvadorjusaino"
-        name="Salvador Jusaino"
-      />
+      <TwitterFollowCard isFollowing userName="salvadorjusaino">
+        Salvador Jusaino
+      </TwitterFollowCard>
 
-      <TwitterFollowCard
-        formatUsername={format}
-        isFollowing={false}
-        userName="juanlopez"
-        name="Juan Lépez"
-      />
+      <TwitterFollowCard isFollowing={false} userName="juanlopez">
+        Juan Lépez
+      </TwitterFollowCard>
 
-      <TwitterFollowCard
-        formatUsername={format}
-        isFollowing
-        userName="anamaria"
-        name="Ana María H"
-      />
+      <TwitterFollowCard isFollowing userName="anamaria">
+        Ana María H
+      </TwitterFollowCard>
     </section>
   )
 }

@@ -5,13 +5,16 @@ function App() {
   
   const format = (userName) => `@${userName}`;
 
+  const salvador = { isFollowing: true, userName: 'salvadorjusaino' }
+  const juan = { isFollowing: true, userName: 'juanlopez' }
+
   return (
     <section className='App'>
-      <TwitterFollowCard isFollowing userName="salvadorjusaino">
+      <TwitterFollowCard {...salvador}>
         Salvador Jusaino
       </TwitterFollowCard>
 
-      <TwitterFollowCard isFollowing={false} userName="juanlopez">
+      <TwitterFollowCard {...juan}>
         Juan Lépez
       </TwitterFollowCard>
 
